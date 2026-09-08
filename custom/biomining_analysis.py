@@ -1,6 +1,6 @@
 """
 @cross-cutting
-@module biomining.biomining_analysis
+@module biomining.custom.biomining_analysis
 @tags @xc:bindings
 
 biomine-1 model — element extraction yield, the refinement pathway, and
@@ -74,7 +74,7 @@ def _source_supply(manager, system, override):
             == 'nutrient-recovery':
         # recover excess N from the coupled tank's surplus (live).
         try:
-            from tanks.tank_analysis import nutrient_balance
+            from tanks.custom.tank_analysis import nutrient_balance
             bal = nutrient_balance(
                 manager, getattr(system, 'source_system_name', ''))
             if bal.get('ok'):

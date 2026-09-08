@@ -3,7 +3,7 @@ Selftest — biomine-1: bioextraction yield, refinement pathways, and
 nutrient-recovery transfer across the specialized variants.
 
 Run from polari-framework/:
-    python3 -m biomining.selftest_biomining
+    python3 -m biomining.biomining_selftest
 
 Covers: extraction scales with agent biomass, selectivity, and days;
 supply bounds the yield (can't pull more than is available) + flags an
@@ -16,7 +16,7 @@ no material row; nutrient-recovery transfer reports the recovered nutrient
 
 from types import SimpleNamespace
 
-from biomining.biomining_analysis import (
+from biomining.custom.biomining_analysis import (
     extraction_yield, recovery_transfer, refinement_pathway,
 )
 from biomining.biomining_seed import (
